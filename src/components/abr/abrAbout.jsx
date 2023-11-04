@@ -81,7 +81,7 @@ const AbrAbout = () => {
                  exceptional gaming skills, and genuine passion for entertaining
                 </p>
                 <p>
-                ABR, which stands for "Always Be real ," is a group of dedicated individuals hailing from different cities.
+                ABR, which stands for Always Be real , is a group of dedicated individuals hailing from different cities.
                 United by their shared love for gaming, they have come together to create a powerhouse team that has taken the Moroccan streaming scene by storm.
                 </p>
                 <Image

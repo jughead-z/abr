@@ -43,10 +43,10 @@ const TeamDetails5 = () => {
                   <span> ABR</span>
                 </h3>
                 <p>
-                Damyus the Giant is an immersive Twitch streamer known for his larger-than-life personality and love for the cyberpunk aesthetic and synthwave music. With a deep passion for the futuristic and neon-infused style, Damyus creates a captivating streaming experience for his viewers.
+                Damysus the Giant is an immersive Twitch streamer known for his larger-than-life personality and love for the cyberpunk aesthetic and synthwave music. With a deep passion for the futuristic and neon-infused style, Damysus creates a captivating streaming experience for his viewers.
                 </p>
                 <p>
-                Damyus's streams are a delightful blend of gaming, music, and cyberpunk culture. He often explores a variety of MMORPG (Massively Multiplayer Online Role-Playing Game) titles, immersing himself in vast virtual worlds and taking his audience along for the adventure. His in-depth knowledge of MMORPGs, combined with his engaging commentary, allows viewers to gain valuable insights into the games he plays.
+                Damysus streams are a delightful blend of gaming, music, and cyberpunk culture. He often explores a variety of MMORPG (Massively Multiplayer Online Role-Playing Game) titles, immersing himself in vast virtual worlds and taking his audience along for the adventure. His in-depth knowledge of MMORPGs, combined with his engaging commentary, allows viewers to gain valuable insights into the games he plays.
                 </p>
               </div>
               <div className="team__member-social">

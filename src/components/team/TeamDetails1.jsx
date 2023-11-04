@@ -43,17 +43,17 @@ const TeamDetails1 = () => {
                   <span> ABR</span>
                 </h3>
                 <p>
-                Mehdi Farah, better known as Dremerz, 
+                Mehdi Farah, better known as Dreamerz, 
                 is a popular Twitch streamer known for his engaging and entertaining content.With a passion for gaming,
-                 Dremerz has built a loyal community of viewers who tune in regularly to watch him play a variety of video games.
+                 Dreamerz has built a loyal community of viewers who tune in regularly to watch him play a variety of video games.
 
 .
                 </p>
                 <p>
-                Dremerz is known for his charismatic personality and witty sense of humor, 
+                Dreamerz is known for his charismatic personality and witty sense of humor, 
                 which adds an extra layer of enjoyment to his streams. 
-                Whether he's exploring open-world adventures, engaging in intense multiplayer battles, or showcasing new releases, 
-                Dremerz's streams are filled with energy and excitement.
+                Whether he is exploring open-world adventures, engaging in intense multiplayer battles, or showcasing new releases, 
+                Dreamerz streams are filled with energy and excitement.
                 </p>
               </div>
               <div className="team__member-social">

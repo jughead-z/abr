@@ -135,7 +135,7 @@ export default function Footer1() {
                 alt="Footer Logo"
               />
               <p>
-              ABR, which stands for "Always Be real ," is a group of dedicated individuals hailing from different cities
+              ABR, which stands for Always Be real , is a group of dedicated individuals hailing from different cities
               </p>
             </div>
             <div className="footer__social-3">

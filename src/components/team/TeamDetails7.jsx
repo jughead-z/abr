@@ -45,7 +45,7 @@ const TeamDetails7 = () => {
                 <p>
                 At ABR, the vibrant gaming community is expertly managed by their dedicated community manager, who goes by the name BlackPers. With unwavering passion and a deep understanding of the gaming world, BlackPers not only excels in fostering a sense of belonging within the community but also shines brightly as a talented streamer                </p>
                 <p>
-                Their engaging streams, characterized by skillful gameplay and charismatic commentary, have captivated audiences far and wide. BlackPers' commitment to creating an inclusive and supportive environment within the ABR community, coupled with their entertaining streaming sessions, makes them a beloved figure among gamers and viewers alike.                </p>
+                Their engaging streams, characterized by skillful gameplay and charismatic commentary, have captivated audiences far and wide. BlackPers commitment to creating an inclusive and supportive environment within the ABR community, coupled with their entertaining streaming sessions, makes them a beloved figure among gamers and viewers alike.                </p>
               </div>
               <div className="team__member-social">
                 <h4 className="work-title">Follow :</h4>

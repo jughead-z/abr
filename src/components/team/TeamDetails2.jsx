@@ -44,10 +44,10 @@ const TeamDetails2 = () => {
                 </h3>
                 <p>
                 Shaké is a charismatic Twitch streamer and the founder of ABR, a renowned esports organization. With a passion for gaming and a visionary mindset,
-                 Shaké has played a significant role in shaping the team's success and building a thriving community.
+                 Shaké has played a significant role in shaping the team success and building a thriving community.
                 </p>
                 <p>
-                As a Twitch streamer, Shaké captivates viewers with their engaging personality and entertaining content. They create a welcoming and inclusive environment, where viewers feel like a part of the community. Whether it's showcasing gameplay, discussing gaming news, or engaging in interactive conversations, Shaké's streams are filled with energy, humor, and a genuine connection with the audience.
+                As a Twitch streamer, Shaké captivates viewers with their engaging personality and entertaining content. They create a welcoming and inclusive environment, where viewers feel like a part of the community. Whether it is showcasing gameplay, discussing gaming news, or engaging in interactive conversations, Shaké streams are filled with energy, humor, and a genuine connection with the audience.
                 </p>
               </div>
               <div className="team__member-social">

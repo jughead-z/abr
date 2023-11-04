@@ -46,7 +46,7 @@ const TeamDetails4 = () => {
                 Mr. Alectrona is a prominent Twitch streamer and the Vice President of Team ABR , a renowned esports organization. With a passion for gaming and a deep understanding of the industry, Mr. Alectrona has established himself as a respected figure in both the streaming and esports worlds.
                 </p>
                 <p>
-                Mr. Alectrona's commitment to his craft and his dedication to the gaming community have garnered him a loyal following and the respect of his peers. His passion for gaming, combined with his leadership role within Team ABR, positions him as an influential figure in the streaming and esports landscape.
+                Mr. Alectrona  commitment to his craft and his dedication to the gaming community have garnered him a loyal following and the respect of his peers. His passion for gaming, combined with his leadership role within Team ABR, positions him as an influential figure in the streaming and esports landscape.
                 </p>
               </div>
               <div className="team__member-social">

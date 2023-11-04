@@ -16,15 +16,15 @@ const AboutStory = () => {
             <div className="row">
               <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
                 <h2 className="sec-sub-title title-anim">Always be real</h2>
-                <h3 className="sec-title title-anim">Morocco's Gaming Legends Unite</h3>
+                <h3 className="sec-title title-anim">Morocco Gaming Legends Unite</h3>
               </div>
               <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
                 <div className="story__text">
                   <p>
                     ABR Team members bring a wide range of gaming styles and genres to the table. 
-                    Whether you're a fan of intense FPS battles, immersive RPG quests, adrenaline-pumping races, or captivating artistry,
+                    Whether you are a fan of intense FPS battles, immersive RPG quests, adrenaline-pumping races, or captivating artistry,
                      ABR Team has something for everyone.
-                     Their diverse content ensures there's never a dull moment, keeping you engaged and entertained.
+                     Their diverse content ensures there is never a dull moment, keeping you engaged and entertained.
                   </p>
                   <p>
                   ABR Team understands the importance of fostering a strong and inclusive community. 
