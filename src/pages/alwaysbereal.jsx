@@ -12,8 +12,8 @@ const Abr = () => {
   return (
     <div>
       <Head>
-        <title>Always be real</title>
-        <meta name="description" content="Creative Agency Description" />
+        <title>Abr</title>
+        <meta name="description" content="Always be real" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
