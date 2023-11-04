@@ -1,12 +1,12 @@
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
-import AbrHero from "@/components/abr/AbrHero";
-import AbrAbout from "@/components/abr/AbrAbout";
-import AbrVideo from "@/components/abr/AbrVideo";
-import AbrWork from "@/components/abr/AbrWork";
-import AbrTeam from "@/components/abr/AbrTeam";
-import AbrBlog from "@/components/abr/AbrBlog";
-import AbrCta from "@/components/abr/AbrCta";
+import AbrHero from "../components/abr/AbrHero"
+import AbrAbout from "../components/abr/AbrAbout";
+import AbrVideo from "../components/abr/AbrVideo";
+import AbrWork from "../components/abr/AbrWork";
+import AbrTeam from "../components/abr/AbrTeam";
+import AbrBlog from "../components/abr/AbrBlog";
+import AbrCta from "../components/abr/AbrCta";
 
 const Abr = () => {
   return (
