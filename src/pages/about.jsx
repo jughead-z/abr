@@ -1,4 +1,5 @@
 import RootLayout from "@/components/common/layout/RootLayout";
+import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 import AboutHero from "@/components/abr-about/AboutHero";
 import AboutStory from "@/components/abr-about/AboutStory";
 import AboutTeam from "@/components/abr-about/AboutTeam";
@@ -17,6 +18,7 @@ const About = () => {
           <AboutHero />
           <AboutStory />
           <AboutTeam />
+          <DigitalAgencyCTA />
         </RootLayout>
       </main>
     </div>
