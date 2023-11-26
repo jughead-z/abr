@@ -12,7 +12,7 @@ const Blog = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <RootLayout header="header3" footer="footer3">
+        <RootLayout header="header4" footer="footer1">
           <Blog1 />
           <DigitalAgencyCTA />
         </RootLayout>
