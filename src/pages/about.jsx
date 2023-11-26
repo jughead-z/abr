@@ -1,11 +1,8 @@
 import DigitalAgencyBrand from "@/components/brand/DigitalAgencyBrand";
 import RootLayout from "@/components/common/layout/RootLayout";
-import AboutCounter from "@/components/counter/AboutCounter";
-import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 import AboutHero from "@/components/abr-about/AboutHero";
 import AboutStory from "@/components/abr-about/AboutStory";
 import AboutTeam from "@/components/abr-about/AboutTeam";
-import AboutTestimonial from "@/components/testimonial/AboutTestimonial";
 import Head from "next/head";
 
 const About = () => {
@@ -21,7 +18,7 @@ const About = () => {
           <AboutHero />
           <AboutStory />
           <AboutTeam />
-          <DigitalAgencyCTA />
+
         </RootLayout>
       </main>
     </div>
