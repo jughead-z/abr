@@ -1,8 +1,7 @@
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
 import Team1 from "@/components/team/Team1";
-import TeamCounter from "@/components/counter/TeamCounter";
-import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
+
 
 const Team = () => {
   return (
