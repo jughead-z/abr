@@ -1,4 +1,3 @@
-import DigitalAgencyBrand from "@/components/brand/DigitalAgencyBrand";
 import RootLayout from "@/components/common/layout/RootLayout";
 import AboutHero from "@/components/abr-about/AboutHero";
 import AboutStory from "@/components/abr-about/AboutStory";
@@ -18,7 +17,6 @@ const About = () => {
           <AboutHero />
           <AboutStory />
           <AboutTeam />
-
         </RootLayout>
       </main>
     </div>
