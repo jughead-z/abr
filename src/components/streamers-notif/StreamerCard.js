@@ -1,49 +1,30 @@
-// StreamerCard.js
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// components/StreamerCard.js
 
-const StreamerCard = ({ streamerName }) => {
+import { useState, useEffect } from 'react';
+
+const StreamerCard = ({ streamerId }) => {
   const [isLive, setIsLive] = useState(false);
 
   useEffect(() => {
-    const checkStreamerStatus = async () => {
+    const fetchStreamerStatus = async () => {
       try {
-        const response = await axios.get(
-          `https://api.twitch.tv/helix/streams?user_login=${streamerName}`,
-          {
-            headers: {
-              'Client-ID': 'mjzb5n4up0i1pnzrof7q91jv227gsr',
-            },
-          }
-        );
-  
-        const streamData = response.data.data[0];
-        setIsLive(!!streamData);
+        const response = await fetch(`/api/streamers/${streamerId}`);
+        const data = await response.json();
+
+        setIsLive(data.isLive);
       } catch (error) {
-        if (error.response) {
-          console.error('Error response from Twitch API:', error.response.data);
-          console.error('Status code:', error.response.status);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.error('No response received from Twitch API:', error.request);
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.error('Error setting up Twitch API request:', error.message);
-        }
+        console.error('Error fetching streamer status:', error);
       }
     };
-  
-    checkStreamerStatus();
-    const interval = setInterval(checkStreamerStatus, 60000);
-  
-    return () => clearInterval(interval);
-  }, [streamerName]);
-  
+
+    fetchStreamerStatus();
+  }, [streamerId]);
 
   return (
-    <div className={`streamer-card ${isLive ? 'live' : ''}`}>
-      <p>{streamerName}</p>
-      {isLive && <p>Live Now!</p>}
+    <div style={{ backgroundColor: isLive ? 'red' : 'green' }}>
+      {/* Other content of the streamer card */}
+      <h3>{streamerId}</h3>
+      <p>{isLive ? 'Live Now' : 'Offline'}</p>
     </div>
   );
 };

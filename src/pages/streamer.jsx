@@ -13,9 +13,9 @@ const TeamDetails = () => {
       </Head>
       <main>
         <RootLayout header="header4" footer="footer1">
-            <div>
+            <div style={{marginTop:'200px'}}>
                 <h1>Live Streamers</h1>
-                <StreamerCard streamerName="dreamerzlel"/>
+                <StreamerCard streamerName="Stormix_dev"/>
                 <StreamerCard streamerName="shake_make"/>
                 
             </div>
