@@ -1,12 +1,10 @@
 // pages/api/streamers/[streamerId].js
-import { getTwitchOAuthURL } from "./twitch-oauth";
-
 export default async function handler(req, res) {
   const { streamerId } = req.query;
 
   try {
     url = `https://api.twitch.tv/helix/streams?user_login=${streamerId}`;
-    const responseUrl = getTwitchOAuthURL({ redirect: url });
+    const responseUrl = await fetch(url);
     const response = await fetch(responseUrl, {
       headers: {
         "Client-ID": process.env.TWITCH_CLIENT_ID,
