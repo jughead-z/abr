@@ -1,37 +1,48 @@
-import { useState, useEffect } from 'react';
+// pages/live-stream/[streamId].js
 
-const StreamerCard = ({ streamerId }) => {
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const LiveStreamPage = ({ streamId }) => {
   const [isLive, setIsLive] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchStreamerStatus = async () => {
+    const checkStreamStatus = async () => {
       try {
-        const response = await fetch(`/api/streamers/${streamerId}`);
-        const data = await response.json();
+        // Replace 'YOUR_TWITCH_CLIENT_ID' with your Twitch application client ID
+        const response = await axios.get(`https://api.twitch.tv/helix/streams?user_login=${streamId}`, {
+          headers: {
+            'Client-ID': 'tjrrznso340zw35r3bf6iurkqgmdup',
+          },
+        });
 
-        setIsLive(data.isLive);
+        const streamData = response.data.data[0];
+        setIsLive(!!streamData); // If streamData is present, the stream is live
       } catch (error) {
-        console.error('Error fetching streamer status:', error);
-        setError('Error fetching streamer status');
-      } finally {
-        setIsLoading(false);
+        console.error('Error fetching Twitch stream status:', error);
       }
     };
 
-    fetchStreamerStatus();
-  }, [streamerId]);
+    // Check stream status when the component mounts
+    checkStreamStatus();
+
+    // Set up polling every 30 seconds (adjust as needed)
+    const intervalId = setInterval(checkStreamStatus, 30000);
+
+    // Cleanup function
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [streamId]);
 
   return (
-    <div style={{ backgroundColor: isLive ? 'red' : 'green' }}>
-      {/* Other content of the streamer card */}
-      <h3>{streamerId}</h3>
-      {isLoading && <p>Loading...</p>}
-      {!isLoading && !error && <p>{isLive ? 'Live Now' : 'Offline'}</p>}
-      {error && <p>Error: {error}</p>}
+    <div>
+      
+      <p style={{ color: isLive ? 'green' : 'black' }}>
+        {isLive ? 'The stream is live!' : 'The stream is not live.'}
+      </p>
     </div>
   );
 };
 
-export default StreamerCard;
+export default LiveStreamPage;
