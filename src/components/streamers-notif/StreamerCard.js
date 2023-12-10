@@ -1,6 +1,6 @@
 // pages/live-stream/[streamId].js
-
 import { useEffect, useState } from 'react';
+import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
 import axios from 'axios';
 
 const LiveStreamPage = ({ streamId }) => {
@@ -9,10 +9,12 @@ const LiveStreamPage = ({ streamId }) => {
   useEffect(() => {
     const checkStreamStatus = async () => {
       try {
-        // Replace 'YOUR_TWITCH_CLIENT_ID' with your Twitch application client ID
+        const accessToken = await getTwitchAccessToken();
+
         const response = await axios.get(`https://api.twitch.tv/helix/streams?user_login=${streamId}`, {
           headers: {
-            'Client-ID': 'tjrrznso340zw35r3bf6iurkqgmdup',
+            'Client-ID': process.env.TWITCH_OAUTH_CLIENT_ID,
+            'Authorization': `Bearer ${accessToken}`,
           },
         });
 

@@ -1,22 +1,29 @@
-export const getTwitchOAuthURL = ({ redirect = "" }) => {
-  const clientId = process.env.NEXT_PUBLIC_TWITCH_OAUTH_CLIENT_ID;
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+// utils/twitchAuth.js
+import axios from 'axios';
 
-  const twitchAuthURL = "https://id.twitch.tv/oauth2/authorize";
-  const params = new URLSearchParams({
-    // eslint-disable-next-line camelcase
-    client_id: clientId || "",
-    // eslint-disable-next-line camelcase
-    redirect_uri: baseUrl + redirect,
-    // eslint-disable-next-line camelcase
-    response_type: "code",
-    scope: "user:read:email+openid",
-    claims: JSON.stringify({
-      // eslint-disable-next-line camelcase
-      id_token: { picture: null },
-      // eslint-disable-next-line camelcase
-      userinfo: { preferred_username: null, picture: null },
-    }),
-  });
-  return new URL(`${twitchAuthURL}?${decodeURIComponent(params.toString())}`);
+const TWITCH_CLIENT_ID = 'f5c9mrzzb5db4zvn7yyttqwcmz4wiq';
+const TWITCH_API_KEY = 'egiav966kdxcwbcnocisual6i2cur';
+
+export const getTwitchAccessToken = async () => {
+  try {
+    const response = await axios.post(
+      'https://id.twitch.tv/oauth2/token',
+      null,
+      {
+        params: {
+          client_id: TWITCH_CLIENT_ID,
+          client_secret: TWITCH_API_KEY,
+          grant_type: 'client_credentials',
+        },
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      }
+    );
+
+    return response.data.access_token;
+  } catch (error) {
+    console.error('Error obtaining Twitch access token:', error);
+    throw error;
+  }
 };

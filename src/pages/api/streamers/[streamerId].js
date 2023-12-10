@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     try {
       const response = await fetch(`https://api.twitch.tv/helix/streams?user_login=${streamerId}`, {
         headers: {
-          'Client-ID': process.env.TWITCH_CLIENT_ID,
+          'Client-ID': process.env.TWITCH_OAUTH_CLIENT_ID,
           'Authorization': process.env.TWITCH_CLIENT_SECRET,
         }
       });
