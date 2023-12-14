@@ -1,9 +1,6 @@
 // utils/twitchAuth.js
 import axios from 'axios';
 
-const TWITCH_CLIENT_ID = 'f5c9mrzzb5db4zvn7yyttqwcmz4wiq';
-const TWITCH_API_KEY = 'egiav966kdxcwbcnocisual6i2cur';
-
 export const getTwitchAccessToken = async () => {
   try {
     const response = await axios.post(
@@ -11,8 +8,8 @@ export const getTwitchAccessToken = async () => {
       null,
       {
         params: {
-          client_id: TWITCH_CLIENT_ID,
-          client_secret: TWITCH_API_KEY,
+          client_id: 'f5c9mrzzb5db4zvn7yyttqwcmz4wiq',
+          client_secret: 'zvzxmh8oqj04aohm6jyc5rzripvsrf',
           grant_type: 'client_credentials',
         },
         headers: {

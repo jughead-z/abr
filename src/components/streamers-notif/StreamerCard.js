@@ -13,13 +13,14 @@ const LiveStreamPage = ({ streamId }) => {
 
         const response = await axios.get(`https://api.twitch.tv/helix/streams?user_login=${streamId}`, {
           headers: {
-            'Client-ID': process.env.TWITCH_OAUTH_CLIENT_ID,
+            'Client-ID': 'f5c9mrzzb5db4zvn7yyttqwcmz4wiq',
             'Authorization': `Bearer ${accessToken}`,
           },
         });
 
-        const streamData = response.data.data[0];
-        setIsLive(!!streamData); // If streamData is present, the stream is live
+        const streamData = response.data[0]?.type === "live";
+        setIsLive(streamData); // If streamData is present, the stream is live
+        console.log(streamData);
       } catch (error) {
         console.error('Error fetching Twitch stream status:', error);
       }
