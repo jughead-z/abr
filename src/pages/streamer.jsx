@@ -16,7 +16,7 @@ const TeamDetails = () => {
             <div style={{marginTop:'200px'}}>
                 <h1>Live Streamers</h1>
                 <LiveStreamPage streamerName="stormix_dev"/>
-                <LiveStreamPage streamerName="bambi_elle"/>
+                <LiveStreamPage streamerName="criss_xc"/>
                 
             </div>
         </RootLayout>

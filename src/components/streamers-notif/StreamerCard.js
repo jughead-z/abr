@@ -15,7 +15,7 @@ const LiveStreamPage = ({ streamerName }) => {
           `https://api.twitch.tv/helix/streams?user_login=${streamerName}`,
           {
             headers: {
-              'Client-ID': 'f9p7rcrtgmg3mm8w8g2ps5h1l02x07',
+              'Client-ID': process.env.TWITCH_CLIENT_ID,
               'Authorization': `Bearer ${accessToken}`,
             },
           }

@@ -8,8 +8,8 @@ export const getTwitchAccessToken = async () => {
       null,
       {
         params: {
-          client_id: 'f9p7rcrtgmg3mm8w8g2ps5h1l02x07',
-          client_secret: '2palp8p8xsai9tyykty8fzy4lczno6',
+          client_id: process.env.TWITCH_CLIENT_ID,
+          client_secret: process.env.TWITCH_CLIENT_SECRET,
           grant_type: 'client_credentials',
         },
         headers: {
