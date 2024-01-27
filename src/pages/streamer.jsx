@@ -15,8 +15,8 @@ const TeamDetails = () => {
         <RootLayout header="header4" footer="footer1">
             <div style={{marginTop:'200px'}}>
                 <h1>Live Streamers</h1>
-                <LiveStreamPage streamerName="maadlou"/>
-                <LiveStreamPage streamerName="shake_make"/>
+                <LiveStreamPage streamerName="Maadlou"/>
+                <LiveStreamPage streamerName="Shake_make"/>
                 
             </div>
         </RootLayout>
