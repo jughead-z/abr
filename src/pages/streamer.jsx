@@ -1,6 +1,6 @@
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
-import StreamerCard from "@/components/streamers-notif/StreamerCard";
+import LiveStreamPage from "@/components/streamers-notif/StreamerCard";
 
 
 const TeamDetails = () => {
@@ -13,10 +13,10 @@ const TeamDetails = () => {
       </Head>
       <main>
         <RootLayout header="header4" footer="footer1">
-            <div>
+            <div style={{marginTop:'200px'}}>
                 <h1>Live Streamers</h1>
-                <StreamerCard streamerName="dreamerzlel"/>
-                <StreamerCard streamerName="shake_make"/>
+                <LiveStreamPage streamerName="Maadlou"/>
+                <LiveStreamPage streamerName="Shake_make"/>
                 
             </div>
         </RootLayout>

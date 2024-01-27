@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link.js";
-import Award from "../../../public/assets/imgs/about/award.png";
 import Image from "next/image.js";
 import animationWordCome from "@/lib/utils/animationWordCome";
 

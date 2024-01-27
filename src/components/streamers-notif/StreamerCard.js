@@ -1,51 +1,51 @@
-// StreamerCard.js
-import React, { useState, useEffect } from 'react';
+// pages/live-stream/[streamId].js
+import { useEffect, useState } from 'react';
+import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
 import axios from 'axios';
 
-const StreamerCard = ({ streamerName }) => {
+const LiveStreamPage = ({ streamId }) => {
   const [isLive, setIsLive] = useState(false);
 
   useEffect(() => {
-    const checkStreamerStatus = async () => {
+    const checkStreamStatus = async () => {
       try {
-        const response = await axios.get(
-          `https://api.twitch.tv/helix/streams?user_login=${streamerName}`,
-          {
-            headers: {
-              'Client-ID': 'mjzb5n4up0i1pnzrof7q91jv227gsr',
-            },
-          }
-        );
-  
-        const streamData = response.data.data[0];
-        setIsLive(!!streamData);
+        const accessToken = await getTwitchAccessToken();
+
+        const response = await axios.get(`https://api.twitch.tv/helix/streams?user_login=${streamId}`, {
+          headers: {
+            'Client-ID': 'f5c9mrzzb5db4zvn7yyttqwcmz4wiq',
+            'Authorization': `Bearer ${accessToken}`,
+          },
+        });
+
+        const streamData = response.data[0]?.type === "live";
+        setIsLive(streamData); // If streamData is present, the stream is live
+        console.log(streamData);
       } catch (error) {
-        if (error.response) {
-          console.error('Error response from Twitch API:', error.response.data);
-          console.error('Status code:', error.response.status);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.error('No response received from Twitch API:', error.request);
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.error('Error setting up Twitch API request:', error.message);
-        }
+        console.error('Error fetching Twitch stream status:', error);
       }
     };
-  
-    checkStreamerStatus();
-    const interval = setInterval(checkStreamerStatus, 60000);
-  
-    return () => clearInterval(interval);
-  }, [streamerName]);
-  
+
+    // Check stream status when the component mounts
+    checkStreamStatus();
+
+    // Set up polling every 30 seconds (adjust as needed)
+    const intervalId = setInterval(checkStreamStatus, 30000);
+
+    // Cleanup function
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [streamId]);
 
   return (
-    <div className={`streamer-card ${isLive ? 'live' : ''}`}>
-      <p>{streamerName}</p>
-      {isLive && <p>Live Now!</p>}
+    <div>
+      
+      <p style={{ color: isLive ? 'green' : 'black' }}>
+        {isLive ? 'The stream is live!' : 'The stream is not live.'}
+      </p>
     </div>
   );
 };
 
-export default StreamerCard;
+export default LiveStreamPage;
