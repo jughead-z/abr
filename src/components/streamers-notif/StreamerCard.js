@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
 import axios from 'axios';
 
-const LiveStreamPage = ({ streamId }) => {
+const LiveStreamPage = ({ streamerName }) => {
   const [isLive, setIsLive] = useState(false);
 
   useEffect(() => {
@@ -11,16 +11,18 @@ const LiveStreamPage = ({ streamId }) => {
       try {
         const accessToken = await getTwitchAccessToken();
 
-        const response = await axios.get(`https://api.twitch.tv/helix/streams?user_login=${streamId}`, {
-          headers: {
-            'Client-ID': 'f5c9mrzzb5db4zvn7yyttqwcmz4wiq',
-            'Authorization': `Bearer ${accessToken}`,
-          },
-        });
+        const response = await axios.get(
+          `https://api.twitch.tv/helix/streams?user_login=${streamerName}`,
+          {
+            headers: {
+              'Client-ID': 'f9p7rcrtgmg3mm8w8g2ps5h1l02x07',
+              'Authorization': `Bearer ${accessToken}`,
+            },
+          }
+        );
 
-        const streamData = response.data[0]?.type === "live";
-        setIsLive(streamData); // If streamData is present, the stream is live
-        console.log(streamData);
+        const streamData = response.data.data[0]; // Check the 'data' property
+        setIsLive(!!streamData); // If streamData is present, the stream is live
       } catch (error) {
         console.error('Error fetching Twitch stream status:', error);
       }
@@ -36,11 +38,10 @@ const LiveStreamPage = ({ streamId }) => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [streamId]);
+  }, [streamerName]);
 
   return (
     <div>
-      
       <p style={{ color: isLive ? 'green' : 'black' }}>
         {isLive ? 'The stream is live!' : 'The stream is not live.'}
       </p>
