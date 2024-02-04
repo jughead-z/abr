@@ -3,6 +3,8 @@ import RootLayout from "@/components/common/layout/RootLayout";
 import LiveStreamPage from "@/components/streamers-notif/StreamerCard";
 
 
+
+
 const TeamDetails = () => {
   return (
     <div>
@@ -13,11 +15,10 @@ const TeamDetails = () => {
       </Head>
       <main>
         <RootLayout header="header4" footer="footer1">
-            <div style={{marginTop:'200px'}}>
-                <h1>Live Streamers</h1>
-                <LiveStreamPage streamerName="stormix_dev"/>
-                <LiveStreamPage streamerName="criss_xc"/>
-                
+            <div style={{ display: 'flex', gap: '1.25rem', overflowX: 'auto', marginTop: '200px', justifyContent: 'center' }}>
+              <LiveStreamPage streamerName="Damysus"/>
+              <LiveStreamPage streamerName="Bazouya"/>
+              <LiveStreamPage streamerName="Anniefuchsia"/>
             </div>
         </RootLayout>
       </main>

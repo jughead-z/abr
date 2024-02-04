@@ -1,10 +1,16 @@
 // pages/live-stream/[streamId].js
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
 import axios from 'axios';
 
+import Team11 from "../../../public/assets/imgs/team/1.jpg";
+import twt from "../../../public/assets/imgs/logo/twitch.png";
+
 const LiveStreamPage = ({ streamerName }) => {
   const [isLive, setIsLive] = useState(false);
+  const [category, setCategory] = useState('');
+  const [viewers, setViewers] = useState(0);
 
   useEffect(() => {
     const checkStreamStatus = async () => {
@@ -22,7 +28,15 @@ const LiveStreamPage = ({ streamerName }) => {
         );
 
         const streamData = response.data.data[0]; // Check the 'data' property
-        setIsLive(!!streamData); // If streamData is present, the stream is live
+        if (streamData) {
+          setIsLive(true);
+          setCategory(streamData.game_name); 
+          setViewers(streamData.viewer_count);
+        } else {
+          setIsLive(false);
+          setCategory('');
+          setViewers(0);
+        }
       } catch (error) {
         console.error('Error fetching Twitch stream status:', error);
       }
@@ -31,7 +45,7 @@ const LiveStreamPage = ({ streamerName }) => {
     // Check stream status when the component mounts
     checkStreamStatus();
 
-    // Set up polling every 30 seconds (adjust as needed)
+    // Set up polling every 30 seconds 
     const intervalId = setInterval(checkStreamStatus, 30000);
 
     // Cleanup function
@@ -41,11 +55,41 @@ const LiveStreamPage = ({ streamerName }) => {
   }, [streamerName]);
 
   return (
-    <div>
-      <p style={{ color: isLive ? 'green' : 'black' }}>
-        {isLive ? 'The stream is live!' : 'The stream is not live.'}
-      </p>
+    <div class="cards">
+  <div class="card">
+    <div class="card__top">
+      <div className={`badge ${isLive ? 'badge--red' : 'badge--gray'} text text--upper badge--live badge--absolute`}>
+        {isLive ? 'live' : 'offline'}
+      </div>
+      <div class="badge badge--gray text text--small badge--viewers badge--absolute">
+        {viewers} viewers
+      </div>
+      <Image
+        class="card__image"
+        src={Team11} 
+        alt="Streamer Thumbnail"
+      />
     </div>
+    <div class="card__body">
+      <Image
+        class="card__avatar"
+        src={twt} 
+        alt="channel's avatar"
+      />
+      <div class="card__desc">
+        <p class="text text--large text--semibold">
+          {category}
+        </p>
+        <p class="text text--muted">{streamerName}</p>
+        <div class="card__tags">
+          <div class="badge badge--white badge--pill text text--small">
+            English
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   );
 };
 

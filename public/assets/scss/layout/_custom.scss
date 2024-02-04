@@ -1,0 +1,169 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.cards {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto; /* Add this line to enable horizontal scrolling if needed */
+}
+
+.card {
+  max-width: 20rem;
+
+  &__top {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__image {
+    transition: all 250ms;
+  }
+
+  &__body {
+    padding: 0.5rem 0.75rem 0.5rem 0;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+
+  &__avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__desc > * {
+    margin-bottom: 0.4rem;
+  }
+
+  &__desc {
+    .text:hover {
+      color: #8846EB;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    fill: white;
+
+    &:hover {
+      background: darken(white, 50);
+      box-shadow: 0 0 0px 4px darken(white, 50);
+      border-radius: 2px;
+    }
+  }
+
+  &__top {
+    position: relative;
+    background: #8846EB;
+
+    &:before,
+    &:after {
+      content: ' ';
+      display: block;
+      background-color: #8846EB;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      z-index: -1;
+      transition: all 250ms;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      transform-origin: top left;
+      transform: rotate(-45deg) scale(0);
+    }
+
+    &:after {
+      right: 0;
+      bottom: 0;
+      width: 10px;
+      height: 10px;
+      transform-origin: bottom right;
+      transform: rotate(45deg) scale(0);
+    }
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  color: white;
+  z-index: 2;
+  transition: all 250ms;
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--red {
+    background: #E91916;
+  }
+
+  &--gray {
+    background: #3E3E40;
+  }
+
+  &--white {
+    font-weight: 600;
+    color: darken(white, 30) !important;
+    background: #3E3E40;
+
+    &:hover {
+      background: darken(#3E3E40, 15);
+    }
+  }
+
+  &--pill {
+    border-radius: 15px;
+  }
+
+  &--live {
+    top: 0.5rem;
+    left: 0.3rem;
+  }
+
+  &--viewers {
+    bottom: 0.5rem;
+    left: 0.3rem;
+  }
+}
+
+.text {
+  font-size: 0.8125rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 25ch;
+  transition: color 100ms;
+  cursor: pointer;
+  color: white;
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--small {
+    font-size: 0.75rem;
+  }
+
+  &--large {
+    font-size: 0.875rem;
+  }
+
+  &--semibold {
+    font-weight: 600;
+  }
+
+  &--muted {
+    color: lighten(black, 70);
+  }
+}
