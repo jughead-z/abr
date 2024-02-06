@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ThumbFooter from "../../../public/assets/imgs/thumb/footer.jpg";
-import FooterLogoWhite from "../../../public/assets/imgs/logo/footer-logo-white.png";
+
 import Image from "next/image";
 
 export default function Footer3() {
@@ -25,13 +25,7 @@ export default function Footer3() {
               <div className="col-xxl-12">
                 <div className="footer__inner">
                   <div className="footer__widget">
-                    <Image
-                      priority
-                      style={{ width: "auto", height: "auto" }}
-                      className="footer__logo"
-                      src={FooterLogoWhite}
-                      alt="Footer Logo"
-                    />
+                   
                     <p>
                       When do they work well, and when do they on us and
                       finally, when do we actually need how can we avoid them.

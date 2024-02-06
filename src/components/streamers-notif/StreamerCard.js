@@ -77,7 +77,7 @@ const LiveStreamPage = ({ streamerName }) => {
         alt="channel's avatar"
       />
       <div class="card__desc">
-        <p class="text text--large text--semibold">
+        <p class="text text--large text--semibold category-cl">
           {category}
         </p>
         <p class="text text--muted">{streamerName}</p>

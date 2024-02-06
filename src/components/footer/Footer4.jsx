@@ -1,6 +1,5 @@
 import Link from "next/link";
-import logoWhite2 from "../../../public/assets/imgs/logo/site-logo-white-2.png";
-import logoBlack from "../../../public/assets/imgs/logo/logo-black.png";
+
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
@@ -45,20 +44,7 @@ export default function Footer4() {
             <div className="col-xxl-12">
               <div className="footer__top-6 pt-150 pb-140">
                 <div className="footer__item-6">
-                  <Image
-                    priority
-                    style={{ width: "auto", height: "auto" }}
-                    className="footer__logo logo-light"
-                    src={logoWhite2}
-                    alt="Footer Logo"
-                  />
-                  <Image
-                    priority
-                    style={{ width: "auto", height: "auto" }}
-                    className="footer__logo logo-dark"
-                    src={logoBlack}
-                    alt="Footer Logo"
-                  />
+
                   <p>
                     When do they work well, and when do they <br /> on us and
                     finally, when do we actually need how can we avoid them.

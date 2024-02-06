@@ -15,10 +15,13 @@ const TeamDetails = () => {
       </Head>
       <main>
         <RootLayout header="header4" footer="footer1">
-            <div style={{ display: 'flex', gap: '1.25rem', overflowX: 'auto', marginTop: '200px', justifyContent: 'center' }}>
+            <div className="live-cards">
+            <div>
+              <h1> Hamid </h1>
+            </div>
               <LiveStreamPage streamerName="Damysus"/>
               <LiveStreamPage streamerName="Bazouya"/>
-              <LiveStreamPage streamerName="Anniefuchsia"/>
+              <LiveStreamPage streamerName="Hakaay"/>
             </div>
         </RootLayout>
       </main>

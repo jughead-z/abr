@@ -2,7 +2,7 @@ import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import logoWhite2 from "../../../public/assets/imgs/logo/site-logo-white-2.png";
+
 import Shape11 from "../../../public/assets/imgs/shape/11.png";
 import Shape12 from "../../../public/assets/imgs/shape/12.png";
 import Image from "next/image";
@@ -58,12 +58,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
           <div className="offcanvas__left">
             <div className="offcanvas__logo">
               <Link href="/digital-marketing">
-                <Image
-                  priority
-                  style={{ width: "auto", height: "auto" }}
-                  src={logoWhite2}
-                  alt="Offcanvas Logo"
-                />
+                
               </Link>
             </div>
             <div className="offcanvas__social">
