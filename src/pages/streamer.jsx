@@ -1,6 +1,11 @@
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
 import LiveStreamPage from "@/components/streamers-notif/StreamerCard";
+import Team11 from "../../public/assets/imgs/team/1.jpg";
+import Team12 from "../../public/assets/imgs/team/2.jpg";
+import Team15 from "../../public/assets/imgs/team/5.jpg";
+
+
 
 
 
@@ -15,13 +20,23 @@ const TeamDetails = () => {
       </Head>
       <main>
         <RootLayout header="header4" footer="footer1">
+            <section className="about__area-7">
+              <div className="container pt-130 pb-110 pbx">
+                <div className="row">
+                  <div className="col-xxl-12">
+                    <div className="sec-title-wrapper">
+                      <h2 className="sec-title title-anim">
+                        Live stream
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
             <div className="live-cards">
-            <div>
-              <h1> Hamid </h1>
-            </div>
-              <LiveStreamPage streamerName="Damysus"/>
-              <LiveStreamPage streamerName="Bazouya"/>
-              <LiveStreamPage streamerName="Hakaay"/>
+              <LiveStreamPage streamerName="Dreamerzlel" imgSrc={Team11}/>
+              <LiveStreamPage streamerName="Shake_make" imgSrc={Team12}/>
+              <LiveStreamPage streamerName="Damysus" imgSrc={Team15}/>
             </div>
         </RootLayout>
       </main>

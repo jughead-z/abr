@@ -4,10 +4,9 @@ import Image from 'next/image';
 import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
 import axios from 'axios';
 
-import Team11 from "../../../public/assets/imgs/team/1.jpg";
 import twt from "../../../public/assets/imgs/logo/twitch.png";
 
-const LiveStreamPage = ({ streamerName }) => {
+const LiveStreamPage = ({ streamerName, imgSrc,twitchLink }) => {
   const [isLive, setIsLive] = useState(false);
   const [category, setCategory] = useState('');
   const [viewers, setViewers] = useState(0);
@@ -56,39 +55,39 @@ const LiveStreamPage = ({ streamerName }) => {
 
   return (
     <div class="cards">
-  <div class="card">
-    <div class="card__top">
-      <div className={`badge ${isLive ? 'badge--red' : 'badge--gray'} text text--upper badge--live badge--absolute`}>
-        {isLive ? 'live' : 'offline'}
-      </div>
-      <div class="badge badge--gray text text--small badge--viewers badge--absolute">
-        {viewers} viewers
-      </div>
-      <Image
-        class="card__image"
-        src={Team11} 
+      <div class="card">
+        <div class="card__top">
+          <div className={`badge ${isLive ? 'badge--red' : 'badge--gray'} text text--upper badge--live badge--absolute`}>
+            {isLive ? 'live' : 'offline'}
+          </div>
+          <div class="badge badge--gray text text--small badge--viewers badge--absolute">
+          {viewers} viewers
+        </div>
+        <Image
+        class={`card__image ${isLive ? 'live-image' : 'offline-image'}`}
+        src={imgSrc} 
         alt="Streamer Thumbnail"
-      />
-    </div>
-    <div class="card__body">
-      <Image
-        class="card__avatar"
-        src={twt} 
-        alt="channel's avatar"
-      />
-      <div class="card__desc">
-        <p class="text text--large text--semibold category-cl">
-          {category}
-        </p>
-        <p class="text text--muted">{streamerName}</p>
-        <div class="card__tags">
-          <div class="badge badge--white badge--pill text text--small">
-            English
+        />
+      </div>
+      <div class="card__body">
+        <Image
+          class="card__avatar"
+          src={twt} 
+          alt="channel's avatar"
+        />
+        <div class="card__desc">
+          <p class="text text--large text--semibold category-cl">
+            {category}
+          </p>
+           <p class="text text--muted">{streamerName}</p>
+          <div class="card__tags">
+            <div class="badge badge--white badge--pill text text--small">
+              English
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
   );
 };

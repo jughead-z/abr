@@ -18,6 +18,12 @@
       "link":"/team"
     },
     {
+      "nav_name": "Live",
+      "link": "/streamer",
+      "type": "",
+      "sub_nav": []
+    },
+    {
       "nav_name": "Contact",
       "link": "/contact",
       "type": "",
