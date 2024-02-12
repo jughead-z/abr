@@ -197,3 +197,44 @@
 .card__image.offline-image {
   filter: grayscale(100%); 
 }
+
+.discord-sw{
+  width: 280px;
+  padding: 50px 30px;
+  background: #7289da;
+  position: fixed;
+  right: -280px;
+  top: 40%;
+  z-index: 99;
+  transform: translateY(-50%);
+  font-family: "Kanit", sans-serif;
+  transition: all 0.3s;
+}
+.discord_icon{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #ac9a10 !important;
+  right: 0;
+  top: 50% !important;
+  transform: translateY(-50%);
+  z-index: 999;
+  transition: all 0.3s;
+  mix-blend-mode: exclusion;
+}
+
+.discord_icon button:hover{
+  color: #000 !important;
+}
+.discord_btn{
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--gray-2);
+  background: #2B2B2F;
+  border-radius: 4px;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  width: 100%;
+}

@@ -1,6 +1,7 @@
 // pages/live-stream/[streamId].js
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
 import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
 import axios from 'axios';
 
@@ -79,7 +80,7 @@ const LiveStreamPage = ({ streamerName, imgSrc,twitchLink }) => {
           <p class="text text--large text--semibold category-cl">
             {category}
           </p>
-           <p class="text text--muted">{streamerName}</p>
+           <Link href={twitchLink}><p class="text text--muted">{streamerName}</p></Link>
           <div class="card__tags">
             <div class="badge badge--white badge--pill text text--small">
               English

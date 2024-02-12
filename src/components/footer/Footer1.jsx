@@ -168,8 +168,8 @@ export default function Footer1() {
               <div className="col-xxl-4 col-xl-4 col-lg-4">
                 <div className="footer__copyright-3">
                   <p>
-                    © 2023  | Alrights reserved by{" "}
-                    <a href="" target="_blank">
+                    © 2023  | All rights reserved by{" "}
+                    <a href="https://github.com/jughead-z/" target="_blank">
                       Criss_xx
                     </a>
                   </p>

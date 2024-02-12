@@ -5,6 +5,7 @@ import CommonAnimation from "../CommonAnimation";
 import ScrollSmootherComponents from "../ScrollSmootherComponents";
 import CursorAnimation from "../CursorAnimation";
 import Switcher from "../Switcher";
+import Discord from "../DiscordSw";
 import ScrollTop from "../ScrollTop";
 import Header1 from "@/components/header/Header1";
 import Footer1 from "@/components/footer/Footer1";
@@ -89,6 +90,7 @@ export default function RootLayout({
           cursor1={cursor1}
           cursor2={cursor2}
         />
+        <Discord/>
         <ScrollTop />
         <HeaderContent header={header} navData={navData} />
         <div id="smooth-wrapper">

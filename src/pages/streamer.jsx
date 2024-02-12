@@ -34,9 +34,9 @@ const TeamDetails = () => {
               </div>
             </section>
             <div className="live-cards">
-              <LiveStreamPage streamerName="Dreamerzlel" imgSrc={Team11}/>
-              <LiveStreamPage streamerName="Shake_make" imgSrc={Team12}/>
-              <LiveStreamPage streamerName="Damysus" imgSrc={Team15}/>
+              <LiveStreamPage streamerName="Dreamerzlel" imgSrc={Team11} twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
+              <LiveStreamPage streamerName="Shake_make" imgSrc={Team12} twitchLink={"https://www.twitch.tv/shake_make"}/>
+              <LiveStreamPage streamerName="Damysus" imgSrc={Team15} twitchLink={"https://www.twitch.tv/damysus"}/>
             </div>
         </RootLayout>
       </main>
