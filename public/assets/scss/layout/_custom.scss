@@ -246,3 +246,25 @@
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+
+.live-circle {
+  color: red;
+}
+
+.offline-circle {
+  color: gray; 
+}
+.live-notif {
+  display: flex;
+  align-items: center; 
+}
+
+.notif {
+  display: flex;
+  align-items: center; 
+}
+
+.live-circle, .offline-circle {
+  margin-right: 5px; /* Adjust as needed */
+}
