@@ -1,12 +1,11 @@
 // pages/live-stream/[streamId].js
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link'
 import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
 import axios from 'axios';
 
 import { FaCircle } from "react-icons/fa";
-import twt from "../../../public/assets/imgs/logo/twitch.png";
+
 
 const StreamNotif = ({ streamerName, imgSrc,twitchLink }) => {
   const [isLive, setIsLive] = useState(false);
@@ -57,7 +56,7 @@ const StreamNotif = ({ streamerName, imgSrc,twitchLink }) => {
 
   return (
     <div className='live-notif'>
-      <div className={`notif ${isLive ? 'badge--red' : 'badge--gray'} text text--upper badge--live badge--absolute`}>
+      <div className={`notif ${isLive ? 'live-circle' : 'offline-circle'} text-notif text--upper badge--live`}>
         <FaCircle className={isLive ? 'live-circle' : 'offline-circle'} />
       </div>
       <Link href={twitchLink}><p class="text text--muted">{streamerName}</p></Link>

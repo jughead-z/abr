@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faXmark } from "@fortawesome/free-solid-svg-icons";
 import StreamNotif from "@/components/streamers-notif/StreamerNotif";
+import Image from "next/image";
+import twitch from "../../../public/assets/imgs/logo/twitch-white.png"
 
 const Switcher = ({ setMode, mode, cursor1, cursor2 }) => {
   const switcherIcon = useRef();
@@ -32,9 +34,9 @@ const Switcher = ({ setMode, mode, cursor1, cursor2 }) => {
   return (
     <>
       <div className="switcher__area">
-        <div className="switcher__icon" ref={switcherIcon}>
+        <div className="switcher__icon notif_icon" ref={switcherIcon}>
           <button id="switcher_open" ref={switcherOpen} onClick={openSwitcher}>
-            <FontAwesomeIcon icon={faGear}></FontAwesomeIcon>
+            <Image src={twitch} width={40} height={25} alt="" />
           </button>
           <button
             id="switcher_close"
@@ -50,7 +52,9 @@ const Switcher = ({ setMode, mode, cursor1, cursor2 }) => {
             <div className="switch__title-wrap">
               <h2 className="switcher__title">Live now</h2>
             </div>
-            <StreamNotif streamerName="lol_berserk" twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
+            <StreamNotif streamerName="Criss_xc" twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
+            <StreamNotif streamerName="Damysus" twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
+            <StreamNotif streamerName="Shake_make" twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
           </div>
 
         </div>
