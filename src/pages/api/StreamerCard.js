@@ -1,13 +1,14 @@
 // pages/live-stream/[streamId].js
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link'
 import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
 import axios from 'axios';
+require('dotenv').config();
 
-import { FaCircle } from "react-icons/fa";
+import twt from "../../../public/assets/imgs/logo/twitch.png";
 
-
-const StreamNotif = ({ streamerName, imgSrc,twitchLink }) => {
+const LiveStreamPage = ({ streamerName, imgSrc,twitchLink }) => {
   const [isLive, setIsLive] = useState(false);
   const [category, setCategory] = useState('');
   const [viewers, setViewers] = useState(0);
@@ -55,13 +56,42 @@ const StreamNotif = ({ streamerName, imgSrc,twitchLink }) => {
   }, [streamerName]);
 
   return (
-    <div className='live-notif'>
-      <div className={`notif ${isLive ? 'live-circle' : 'offline-circle'} text-notif text--upper badge--live`}>
-        <FaCircle className={isLive ? 'live-circle' : 'offline-circle'} />
+    <div class="cards">
+      <div class="card">
+        <div class="card__top">
+          <div className={`badge ${isLive ? 'badge--red' : 'badge--gray'} text text--upper badge--live badge--absolute`}>
+            {isLive ? 'live' : 'offline'}
+          </div>
+          <div class="badge badge--gray text text--small badge--viewers badge--absolute">
+          {viewers} viewers
+        </div>
+        <Image
+        class={`card__image ${isLive ? 'live-image' : 'offline-image'}`}
+        src={imgSrc} 
+        alt="Streamer Thumbnail"
+        />
       </div>
-      <Link href={twitchLink}><p class="text text--muted">{streamerName}</p></Link>
+      <div class="card__body">
+        <Image
+          class="card__avatar"
+          src={twt} 
+          alt="channel's avatar"
+        />
+        <div class="card__desc">
+          <p class="text text--large text--semibold category-cl">
+            {category}
+          </p>
+           <Link href={twitchLink}><p class="text text--muted">{streamerName}</p></Link>
+          <div class="card__tags">
+            <div class="badge badge--white badge--pill text text--small">
+              English
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
   );
 };
 
-export default StreamNotif;
+export default LiveStreamPage;

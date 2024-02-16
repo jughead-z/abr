@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faXmark } from "@fortawesome/free-solid-svg-icons";
-import StreamNotif from "@/components/streamers-notif/StreamerNotif";
+import StreamNotif from "../../../src/pages/api/StreamerNotif";
 import Image from "next/image";
 import twitch from "../../../public/assets/imgs/logo/twitch-white.png"
 
@@ -52,7 +52,7 @@ const Switcher = ({ setMode, mode, cursor1, cursor2 }) => {
             <div className="switch__title-wrap">
               <h2 className="switcher__title">Live now</h2>
             </div>
-            <StreamNotif streamerName="Criss_xc" twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
+            <StreamNotif streamerName="Dreamerzlel" twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
             <StreamNotif streamerName="Damysus" twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
             <StreamNotif streamerName="Shake_make" twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
           </div>
