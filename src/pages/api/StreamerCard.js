@@ -81,7 +81,7 @@ const LiveStreamPage = ({ streamerName, imgSrc,twitchLink }) => {
           <p class="text text--large text--semibold category-cl">
             {category}
           </p>
-           <Link href={twitchLink}><p class="text text--muted">{streamerName}</p></Link>
+           <Link href={twitchLink} target='_blank'><p class="text text--muted">{streamerName}</p></Link>
           <div class="card__tags">
             <div class="badge badge--white badge--pill text text--small">
               English

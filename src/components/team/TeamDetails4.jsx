@@ -53,21 +53,21 @@ const TeamDetails4 = () => {
                 <h4 className="work-title">Follow :</h4>
                 <ul>
                   <li>
-                    <a href="https://www.twitch.tv/mralectrona">
+                    <a href="https://www.twitch.tv/mralectrona" target="_blank">
                       <span>
                         <i className="fa-brands fa fa-twitch"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/mralectrona">
+                    <a href="https://twitter.com/mralectrona" target="_blank">
                       <span>
                         <i className="fa-brands fa-twitter"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/mralectrona/">
+                    <a href="https://www.instagram.com/mralectrona/" target="_blank">
                       <span>
                         <i className="fa-brands fa-instagram"></i>
                       </span>

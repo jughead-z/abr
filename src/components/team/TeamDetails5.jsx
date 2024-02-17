@@ -53,28 +53,28 @@ const TeamDetails5 = () => {
                 <h4 className="work-title">Follow :</h4>
                 <ul>
                   <li>
-                    <a href="https://www.twitch.tv/damysus">
+                    <a href="https://www.twitch.tv/damysus" target="_blank">
                       <span>
                         <i className="fa-brands fa fa-twitch"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/DamysusG">
+                    <a href="https://twitter.com/DamysusG" target="_blank">
                       <span>
                         <i className="fa-brands fa-twitter"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/damysus/">
+                    <a href="https://www.instagram.com/damysus/" target="_blank">
                       <span>
                         <i className="fa-brands fa-instagram"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/@DamysusG">
+                    <a href="https://www.youtube.com/@DamysusG" target="_blank">
                     <span>
                         <i className="fa-brands fa-youtube"></i>
                       </span>

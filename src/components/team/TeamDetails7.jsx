@@ -51,21 +51,21 @@ const TeamDetails7 = () => {
                 <h4 className="work-title">Follow :</h4>
                 <ul>
                   <li>
-                    <a href="https://www.twitch.tv/blackupers">
+                    <a href="https://www.twitch.tv/blackupers" target="_blank">
                       <span>
                         <i className="fa-brands fa fa-twitch"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/Blackupers">
+                    <a href="https://twitter.com/Blackupers" target="_blank">
                       <span>
                         <i className="fa-brands fa-twitter"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/blackperss/">
+                    <a href="https://www.instagram.com/blackperss/" target="_blank">
                       <span>
                         <i className="fa-brands fa-instagram"></i>
                       </span>

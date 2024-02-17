@@ -60,28 +60,28 @@ const TeamDetails1 = () => {
                 <h4 className="work-title">Follow :</h4>
                 <ul>
                   <li>
-                    <a href="https://www.twitch.tv/dreamerzlel">
+                    <a href="https://www.twitch.tv/dreamerzlel" target="_blank">
                       <span>
                         <i className="fa-brands fa fa-twitch"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/dreamerzlel">
+                    <a href="https://twitter.com/dreamerzlel" target="_blank">
                       <span>
                         <i className="fa-brands fa-twitter"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/mehdi.farah/">
+                    <a href="https://www.instagram.com/mehdi.farah/" target="_blank">
                       <span>
                         <i className="fa-brands fa-instagram"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/@Hopsyfrfr">
+                    <a href="https://www.youtube.com/@Hopsyfrfr" target="_blank">
                       <span>
                         <i className="fa-brands fa-youtube"></i>
                       </span>

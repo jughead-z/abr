@@ -8,8 +8,6 @@ import Team15 from "../../public/assets/imgs/team/5.jpg";
 
 
 
-
-
 const TeamDetails = () => {
   return (
     <div>

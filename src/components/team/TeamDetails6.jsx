@@ -53,28 +53,28 @@ const TeamDetails6 = () => {
                 <h4 className="work-title">Follow :</h4>
                 <ul>
                   <li>
-                    <a href="https://www.twitch.tv/akashi10tv">
+                    <a href="https://www.twitch.tv/akashi10tv" target="_blank">
                       <span>
                         <i className="fa-brands fa fa-twitch"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/ak4shi10">
+                    <a href="https://twitter.com/ak4shi10" target="_blank">
                       <span>
                         <i className="fa-brands fa-twitter"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/akashi10tv/">
+                    <a href="https://www.instagram.com/akashi10tv/" target="_blank">
                       <span>
                         <i className="fa-brands fa-instagram"></i>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/@akashi10tv">
+                    <a href="https://www.youtube.com/@akashi10tv" target="_blank">
                     <span>
                         <i className="fa-brands fa-youtube"></i>
                       </span>

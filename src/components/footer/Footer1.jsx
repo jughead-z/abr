@@ -32,96 +32,7 @@ export default function Footer1() {
     }
   };
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      let tHero = gsap.context(() => {
-        let endTl = gsap.timeline({
-          repeat: -1,
-          delay: 0.5,
-          scrollTrigger: {
-            trigger: ".end",
-            start: "bottom 100%-=50px",
-          },
-        });
-        gsap.set(".end", {
-          opacity: 0,
-        });
-        gsap.to(".end", {
-          opacity: 1,
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".end",
-            start: "bottom 100%-=50px",
-            once: true,
-          },
-        });
-        let mySplitText = new SplitText(".end", { type: "words,chars" });
-        let chars = mySplitText.chars;
-        let endGradient = chroma.scale([
-          "#2c8dcc",
-          "#2c8dcc",
-          "#2c8dcc",
-          "#2c8dcc",
-        ]);
-        endTl.to(chars, {
-          duration: 0.5,
-          scaleY: 0.6,
-          ease: "power3.out",
-          stagger: 0.04,
-          transformOrigin: "center bottom",
-        });
-        endTl.to(
-          chars,
-          {
-            yPercent: -20,
-            ease: "elastic",
-            stagger: 0.03,
-            duration: 0.8,
-          },
-          0.5
-        );
-        endTl.to(
-          chars,
-          {
-            scaleY: 1,
-            ease: "elastic.out(2.5, 0.2)",
-            stagger: 0.03,
-            duration: 1.5,
-          },
-          0.5
-        );
-        endTl.to(
-          chars,
-          {
-            color: (i, el, arr) => {
-              return endGradient(i / arr.length).hex();
-            },
-            ease: "power2.out",
-            stagger: 0.03,
-            duration: 0.3,
-          },
-          0.5
-        );
-        endTl.to(
-          chars,
-          {
-            yPercent: 0,
-            ease: "back",
-            stagger: 0.03,
-            duration: 0.8,
-          },
-          0.7
-        );
-        endTl.to(chars, {
-          color: "#c9f31d",
-          duration: 1.4,
-          stagger: 0.05,
-        });
-      });
-      return () => tHero.revert();
-    }
-  }, []);
+  
   return (
     <>
       <footer className="footer__area-3">
@@ -141,16 +52,16 @@ export default function Footer1() {
             <div className="footer__social-3">
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/alwaysberealtv">facebook</a>
+                  <a href="https://www.facebook.com/alwaysberealtv" target="_blank">facebook</a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/alwaysberealtv">Twitter</a>
+                  <a href="https://twitter.com/alwaysberealtv" target="_blank">Twitter</a>
                 </li>
                 <li>
-                  <a href="https://www.twitch.tv/alwaysberealtv">Twitch</a>
+                  <a href="https://www.twitch.tv/alwaysberealtv" target="_blank">Twitch</a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/alwaysberealtv">Instagram</a>
+                  <a href="https://www.instagram.com/alwaysberealtv" target="_blank">Instagram</a>
                 </li>
               </ul>
             </div>

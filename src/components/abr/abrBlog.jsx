@@ -59,7 +59,7 @@ const AbrBlog = () => {
           <div className="row">
             <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
               <div className="sec-title-wrapper">
-                <h3 className="sec-title title-anim">News insignt</h3>
+                <h3 className="sec-title title-anim">News insight</h3>
               </div>
             </div>
             <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4">

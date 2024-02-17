@@ -60,7 +60,7 @@ const StreamNotif = ({ streamerName, imgSrc,twitchLink }) => {
       <div className={`notif ${isLive ? 'live-circle' : 'offline-circle'} text-notif text--upper badge--live`}>
         <FaCircle className={isLive ? 'live-circle' : 'offline-circle'} />
       </div>
-      <Link href={twitchLink}><p class="text text--muted">{streamerName}</p></Link>
+      <Link href={twitchLink} target='_blank'><p class="text text--muted">{streamerName}</p></Link>
     </div>
   );
 };

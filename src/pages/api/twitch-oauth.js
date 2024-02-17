@@ -5,7 +5,7 @@ export const getTwitchAccessToken = async () => {
   try {
     const response = await axios.post(
       'https://id.twitch.tv/oauth2/token',
-      null,
+       null,
       {
         params: {
           client_id: process.env.TWITCH_CLIENT_ID,
