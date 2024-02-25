@@ -1,6 +1,6 @@
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
-import LiveStreamPage from "../../src/pages/api/StreamerCard";
+import LiveStreamPage from "../../src/pages/live-stream/[streamId]";
 import Team11 from "../../public/assets/imgs/team/1.jpg";
 import Team12 from "../../public/assets/imgs/team/2.jpg";
 import Team15 from "../../public/assets/imgs/team/5.jpg";

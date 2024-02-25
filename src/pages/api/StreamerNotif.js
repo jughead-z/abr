@@ -1,7 +1,7 @@
 // pages/live-stream/[streamId].js
 import { useEffect, useState } from 'react';
 import Link from 'next/link'
-import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
+import { getTwitchAccessToken } from './twitchAuth'; // Adjust the path as needed
 import axios from 'axios';
 require('dotenv').config();
 

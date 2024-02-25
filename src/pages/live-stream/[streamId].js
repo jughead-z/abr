@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link'
-import { getTwitchAccessToken } from './twitch-oauth'; // Adjust the path as needed
+import { getTwitchAccessToken } from '../api/twitchAuth'; // Adjust the path as needed
 import axios from 'axios';
 require('dotenv').config();
 
