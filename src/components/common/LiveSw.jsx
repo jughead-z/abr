@@ -47,7 +47,10 @@ const Switcher = ({ setMode, mode, cursor1, cursor2 }) => {
           </button>
         </div>
 
-        <div className="switcher__items" ref={switcherItems}>
+
+        {/* Careful, StreamNotif is rendered in client side  */}
+        
+        {/* <div className="switcher__items" ref={switcherItems}>
           <div className="switcher__item">
             <div className="switch__title-wrap">
               <h2 className="switcher__title">Live now</h2>
@@ -57,7 +60,7 @@ const Switcher = ({ setMode, mode, cursor1, cursor2 }) => {
             <StreamNotif streamerName="Shake_make" twitchLink={"https://www.twitch.tv/dreamerzlel"}/>
           </div>
 
-        </div>
+        </div> */}
       </div>
     </>
   );

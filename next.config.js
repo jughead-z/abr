@@ -8,6 +8,9 @@ const nextConfig = {
     TWITCH_CLIENT_SECRET: process.env.TWITCH_CLIENT_SECRET,
   },
   // Additional configurations can be added here
+  experimental: {
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;
