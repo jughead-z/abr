@@ -1,11 +1,11 @@
 // utils/twitchAuth.js
 import axios from 'axios';
 
-export const getTwitchAccessToken = async () => {
+export async function getTwitchAccessToken() {
   try {
     const response = await axios.post(
       'https://id.twitch.tv/oauth2/token',
-       null,
+      null,
       {
         params: {
           client_id: process.env.TWITCH_CLIENT_ID,
@@ -17,10 +17,9 @@ export const getTwitchAccessToken = async () => {
         },
       }
     );
-
-    return response.data.access_token;
+    return response.json();
   } catch (error) {
-    console.error('Error obtaining Twitch access token:', error);
-    throw error;
+    console.error('Error obtaining Twitch access token:');
+    //   // throw error;
   }
 };

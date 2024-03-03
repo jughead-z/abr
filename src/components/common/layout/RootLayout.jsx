@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
 import allNavData from "../../../data/navData.json";
 import Preloader from "@/components/preloader/Preloader";
@@ -90,8 +91,8 @@ export default function RootLayout({
           cursor1={cursor1}
           cursor2={cursor2}
         /> */}
-        <Discord/>
-        <Live/>
+        <Discord />
+        {/* <Live/> */}
         <ScrollTop />
         <HeaderContent header={header} navData={navData} />
         <div id="smooth-wrapper">
